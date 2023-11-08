@@ -1,4 +1,3 @@
-/* Confetti by Patrik Svensson (http://metervara.net) */
 $(document).ready(function () {
   var frameRate = 30;
   var dt = 1.0 / frameRate;
