@@ -448,8 +448,8 @@ let DISCOVERY_DOCS = [
 // Define the scopes for calendar access
 let SCOPES = "https://www.googleapis.com/auth/calendar";
 
-let authorizeButton = document.getElementById("authorize-button");
-let rsvpButton = document.getElementById("rsvpButton");
+const authorizeButton = document.getElementById("authorize-button");
+const rsvpButton = document.getElementById("rsvpButton");
 
 // Initialize the API client and handle the RSVP action
 function handleRSVPClick() {
