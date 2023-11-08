@@ -3,50 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles/style.css" />
-    <title>Birthday Invitation</title>
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.11.0.js"
+      defer
+    ></script>
+    <script src="./script.js" defer></script>
+    <script src="https://apis.google.com/js/client.js" defer></script>
+
+    <title>Birthday Party</title>
   </head>
   <body>
-    <div class="wrapper">
-      <div class="confetti-container">
-        <div class="confetti"></div>
+    <div id="confetti">
+      <div class="wrapper">
+        <div class="image">
+          <img src="./images/sara.jpg" alt="" />
+        </div>
+        <div class="text"></div>
 
-        <!-- Add more confetti elements here -->
-      </div>
+        <div class="details">
+          <ul>
+            <li>Date: 2023 December 16th</li>
+            <li>Time: 18:00</li>
+            <li>
+              Where:
+              <span
+                ><a class="location" href="https://www.kiddo.ro/parklake/"
+                  >Kiddo Parklake</a
+                ></span
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="text">
+          <h2 class="title">Be there or be square!</h2>
+        </div>
+        <button id="rsvpButton">RSVP to Event</button>
 
-      <div class="image">
-        <img src="./images/sara.jpg" alt="" />
+        <div class="kiddo">
+          <a href="https://www.kiddo.ro/parklake/">
+            <img src="./images/logo.png" />
+          </a>
+        </div>
       </div>
-      <div class="text">
-        <h1 class="title">Join my 8th Birthday Party</h1>
-      </div>
-
-      <div class="details">
-        <ul>
-          <li>Date: 2023 December 16th</li>
-          <li>Time: 18:00</li>
-          <li>
-            Where:
-            <span
-              ><a class="location" href="https://www.kiddo.ro/parklake/"
-                >Kiddo Parklake</a
-              ></span
-            >
-          </li>
-        </ul>
-      </div>
-      <div class="text">
-        <h1 class="title">Be there or be square!</h1>
-      </div>
-      <div class="kiddo">
-        <a href="https://www.kiddo.ro/parklake/">
-          <img src="./images/logo.png" />
-        </a>
-      </div>
-      <audio autoplay loop hidden>
-        <source src="./audio/Upbeat-Birthday-Song.mp3" type="audio/mp3" />
-      </audio>
     </div>
   </body>
 </html>
