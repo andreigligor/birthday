@@ -437,9 +437,8 @@ $(document).ready(function () {
 //RSVP functionality
 
 // Replace with your Google API credentials
-const CLIENT_ID =
-  97055236307 - n1ggirge427m1osc1em0mb2kbv5f9f2h.apps.googleusercontent.com;
-const API_KEY = AIzaSyCYby7EGAuS07dN4m0g26RFgFCFGZ0wc54;
+const CLIENT_ID = process.env.CLIENT_ID;
+const API_KEY = process.env.API_KEY;
 
 // Define the Google Calendar API discovery document
 let DISCOVERY_DOCS = [
