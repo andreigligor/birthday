@@ -1,10 +1,15 @@
 body {
   display: flex;
-  background-color: #000;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/background.jpg");
+  background-repeat: no-repeat;
+  /* background-position: center center; */
+  background-size: cover;
 }
 
 #confetti {
-  background: #000;
+  /* background: #000; */
   height: 100%;
   left: 0px;
   position: absolute;
@@ -12,7 +17,7 @@ body {
   width: 100%;
 }
 .wrapper {
-  background: #000;
+  margin-top: 300px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -46,25 +51,20 @@ h3 {
   font-family: customfont;
 }
 
-.image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.image img {
-  width: 200px;
-  height: 300px;
+.title {
+  padding-top: 50px;
+  color: rgb(30, 150, 220);
 }
 
 .text {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: -30px;
 }
 
 .text h2 {
-  color: white;
+  color: rgb(30, 150, 220);
   margin-top: -7px;
 }
 
@@ -72,33 +72,44 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: -10px;
+  margin-left: -40px;
 }
 
 .details li {
-  color: white;
+  color: rgb(0, 82, 99);
   list-style-type: none;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: large;
-  line-height: 180%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", "Arial", "sans-serif";
+  font-size: medium;
+  line-height: 100%;
 }
 
 .kiddo {
   display: flex;
   justify-content: center;
+  z-index: 500;
+}
+
+.kiddo img {
+  width: 147px;
+  height: 53px;
 }
 
 .location {
-  color: white;
+  color: blue;
+  z-index: 400;
 }
 
 #rsvpButton {
-  font-size: large;
+  font-size: small;
   font-family: Arial, Helvetica, sans-serif;
-  padding: 10px;
+  padding: 7px;
   margin-bottom: 10px;
   border-radius: 10px;
-  background-color: rgb(101, 205, 240);
-  color: red;
+  border-color: none;
+  background-color: rgb(30, 150, 220);
+  color: white;
   font-weight: bold;
+  z-index: 700;
+  cursor: pointer;
 }

@@ -10,37 +10,44 @@
       defer
     ></script>
     <script src="./script.js" defer></script>
-    <script src="https://apis.google.com/js/client.js" defer></script>
-    <script src="https://apis.google.com/js/api.js" defer></script>
+    <script
+      async
+      defer
+      src="https://apis.google.com/js/api.js"
+      onload="gapiLoaded()"
+    ></script>
+    <script
+      async
+      defer
+      src="https://accounts.google.com/gsi/client"
+      onload="gisLoaded()"
+    ></script>
 
     <title>Birthday Party</title>
   </head>
   <body>
+    <p>Drive API Quickstart</p>
+
+    <!--Add buttons to initiate auth sequence and sign out-->
+    <button id="authorize_button" onclick="handleAuthClick()">Authorize</button>
+    <button id="signout_button" onclick="handleSignoutClick()">Sign Out</button>
+
+    <pre id="content" style="white-space: pre-wrap"></pre>
     <div id="confetti">
       <div class="wrapper">
-        <div class="image">
-          <img src="./images/sara.jpg" alt="" />
-        </div>
-        <div class="text"></div>
-        <div class="details">
-          <ul>
-            <li>Date: 16.12.2023</li>
-            <li>Time: 18:00</li>
-            <li>
-              Where:
-              <span
-                ><a class="location" href="https://www.kiddo.ro/parklake/"
-                  >Kiddo Parklake</a
-                ></span
-              >
-            </li>
-          </ul>
+        <div class="title">
+          <h2>Join My Birthday Party</h2>
         </div>
         <div class="text">
-          <h2 class="title">Be there or be square!</h2>
+          <div class="details">
+            <ul>
+              <li>Date: 16.12.2023</li>
+              <li>Time: 18:00-21:00</li>
+              <li>Where: ParkLake Mall</li>
+            </ul>
+          </div>
         </div>
-        <button id="rsvpButton">RSVP to Event</button>
-
+        <button id="rsvpButton">Click to confirm</button>
         <div class="kiddo">
           <a href="https://www.kiddo.ro/parklake/">
             <img src="./images/logo.png" />
