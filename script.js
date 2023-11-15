@@ -21,6 +21,7 @@ $(function () {
   });
 });
 
+//Confetti
 $(document).ready(function () {
   var frameRate = 30;
   var dt = 1.0 / frameRate;
