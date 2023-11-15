@@ -10,7 +10,7 @@ $(function () {
       url: "https://api.apispreadsheets.com/data/l3g989P3sw3YZqC1/",
       data: $("#myForm").serialize(),
       success: function () {
-        alert("Your data was submitted successfully. See you at the party! ");
+        alert("Your data was submitted successfully. See you at the party! 😄");
       },
       error: function () {
         alert;
