@@ -110,8 +110,11 @@ h3 {
   cursor: pointer;
 }
 
-#inputForm {
+.inputForm {
   display: none;
+}
+.inputFormVisible {
+  display: block;
 }
 
 #myForm {

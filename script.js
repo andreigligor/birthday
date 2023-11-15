@@ -5,6 +5,7 @@
 $(function () {
   $("#myForm").on("click", "#submitForm", function (e) {
     e.preventDefault();
+
     $.ajax({
       type: "POST",
       url: "https://api.apispreadsheets.com/data/l3g989P3sw3YZqC1/",
@@ -34,20 +35,21 @@ $(document).ready(function () {
     ["#ffd200", "#b06c00"],
   ];
 
+  const submitFormBtn = document.getElementById("submitForm");
+  submitFormBtn.addEventListener("click", () => {
+    const formClosure = document.querySelector(".inputFormVisible");
+    formClosure.classList.remove("inputFormVisible");
+    formClosure.classList.add("inputForm");
+  });
+
   // Get references to the button and form
 
   const openFormBtn = document.getElementById("rsvpButton");
 
   openFormBtn.addEventListener("click", () => {
-    const form = document.getElementById("inputForm");
-
-    if (form.style.display === "none") {
-      // 👇️ this SHOWS the form
-      form.style.display = "flex";
-    } else {
-      // 👇️ this HIDES the form
-      form.style.display = "none";
-    }
+    const form = document.querySelector(".inputForm");
+    form.classList.remove("inputForm");
+    form.classList.add("inputFormVisible");
   });
 
   function Vector2(_x, _y) {
