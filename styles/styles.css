@@ -1,7 +1,4 @@
 body {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   background-image: url("../images/background.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -9,7 +6,6 @@ body {
 }
 
 #confetti {
-  /* background: #000; */
   height: 100%;
   left: 0px;
   position: absolute;
@@ -17,7 +13,7 @@ body {
   width: 100%;
 }
 .wrapper {
-  margin-top: 300px;
+  margin-top: 250px;
   display: flex;
   flex-direction: column;
   position: relative;
