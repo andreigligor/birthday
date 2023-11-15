@@ -109,3 +109,34 @@ h3 {
   z-index: 700;
   cursor: pointer;
 }
+
+#myForm {
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  display: flex;
+  position: relative;
+  background-color: rgb(30, 150, 220);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  padding: 7px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-color: none;
+  opacity: 85%;
+  z-index: 1000;
+}
+
+#myForm > button {
+  width: 70px;
+  height: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+  border-radius: 10px;
+  z-index: 1200;
+  cursor: pointer;
+}

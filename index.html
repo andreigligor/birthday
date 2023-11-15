@@ -5,16 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="./styles/styles.css" />
     <script
-      type="text/javascript"
-      src="https://code.jquery.com/jquery-1.11.0.js"
-      defer
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
     ></script>
-    <script src="./script.js" defer></script>
+
+    <script src="./script.js"></script>
+
     <title>Birthday Party</title>
   </head>
   <body>
     <div id="confetti">
       <div class="wrapper">
+        <div class="inputForm">
+          <form id="myForm">
+            <label>Full Name</label>
+            <input name="full_name" />
+            <br />
+            <label>No. of Adults</label>
+            <input type="number" name="adults" />
+            <br />
+            <label>No. of Children</label>
+            <input type="number" name="children" />
+            <br />
+            <button id="submitForm">Submit</button>
+          </form>
+        </div>
         <div class="title">
           <h2>Join My Birthday Party</h2>
         </div>
