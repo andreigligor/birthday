@@ -34,6 +34,21 @@ $(document).ready(function () {
     ["#ffd200", "#b06c00"],
   ];
 
+  // Get references to the button and form
+  let openFormBtn = document.getElementById("rsvpButton");
+  let form = document.querySelector(".inputForm");
+
+  // Add a click event listener to the button
+  openFormBtn.addEventListener("click", function (e) {
+    // Toggle the visibility of the form
+    e.preventDefault();
+    if (form.style.visibility == "hidden") {
+      form.style.visibility = "visible";
+    } else {
+      form.style.visibility = "hidden";
+    }
+  });
+
   function Vector2(_x, _y) {
     (this.x = _x), (this.y = _y);
     this.Length = function () {
