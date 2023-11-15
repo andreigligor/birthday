@@ -1,7 +1,6 @@
 "use strict";
 
 // Uploading data to Gsheets
-
 $(function () {
   $("#myForm").on("click", "#submitForm", function (e) {
     e.preventDefault();
@@ -11,11 +10,11 @@ $(function () {
       url: "https://api.apispreadsheets.com/data/l3g989P3sw3YZqC1/",
       data: $("#myForm").serialize(),
       success: function () {
-        alert("The data was submitted successfully. See you at the party!");
+        alert("Your data was submitted successfully. See you at the party! ");
       },
       error: function () {
         alert;
-        ("Data was not submitted properly. Please try again.");
+        ("Your data was not submitted properly. Please try again.");
       },
     });
     return false;
@@ -23,6 +22,22 @@ $(function () {
 });
 
 $(document).ready(function () {
+  //Closing the form after submitting the results
+  const submitFormBtn = document.getElementById("submitForm");
+  submitFormBtn.addEventListener("click", () => {
+    const formClosure = document.querySelector(".inputFormVisible");
+    formClosure.classList.remove("inputFormVisible");
+    formClosure.classList.add("inputForm");
+  });
+
+  //Opening the form when clicking the RSVP Button
+  const openFormBtn = document.getElementById("rsvpButton");
+  openFormBtn.addEventListener("click", () => {
+    const form = document.querySelector(".inputForm");
+    form.classList.remove("inputForm");
+    form.classList.add("inputFormVisible");
+  });
+
   //Confetti
   var frameRate = 30;
   var dt = 1.0 / frameRate;
@@ -34,24 +49,6 @@ $(document).ready(function () {
     ["#2bebbc", "#05798a"],
     ["#ffd200", "#b06c00"],
   ];
-
-  const submitFormBtn = document.getElementById("submitForm");
-  submitFormBtn.addEventListener("click", () => {
-    const formClosure = document.querySelector(".inputFormVisible");
-    formClosure.classList.remove("inputFormVisible");
-    formClosure.classList.add("inputForm");
-  });
-
-  // Get references to the button and form
-
-  const openFormBtn = document.getElementById("rsvpButton");
-
-  openFormBtn.addEventListener("click", () => {
-    const form = document.querySelector(".inputForm");
-    form.classList.remove("inputForm");
-    form.classList.add("inputFormVisible");
-  });
-
   function Vector2(_x, _y) {
     (this.x = _x), (this.y = _y);
     this.Length = function () {
