@@ -116,7 +116,7 @@ h3 {
   align-items: left;
   display: flex;
   position: relative;
-  background-color: rgb(30, 150, 220);
+  background: rgb(30, 150, 220);
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   padding: 7px;
