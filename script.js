@@ -21,8 +21,8 @@ $(function () {
   });
 });
 
-//Confetti
 $(document).ready(function () {
+  //Confetti
   var frameRate = 30;
   var dt = 1.0 / frameRate;
   var DEG_TO_RAD = Math.PI / 180;
@@ -35,17 +35,18 @@ $(document).ready(function () {
   ];
 
   // Get references to the button and form
-  let openFormBtn = document.getElementById("rsvpButton");
-  let form = document.querySelector(".inputForm");
 
-  // Add a click event listener to the button
-  openFormBtn.addEventListener("click", function (e) {
-    // Toggle the visibility of the form
-    e.preventDefault();
-    if (form.style.visibility == "hidden") {
-      form.style.visibility = "visible";
+  const openFormBtn = document.getElementById("rsvpButton");
+
+  openFormBtn.addEventListener("click", () => {
+    const form = document.getElementById("inputForm");
+
+    if (form.style.display === "none") {
+      // 👇️ this SHOWS the form
+      form.style.display = "flex";
     } else {
-      form.style.visibility = "hidden";
+      // 👇️ this HIDES the form
+      form.style.display = "none";
     }
   });
 
