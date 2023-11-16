@@ -21,6 +21,8 @@ $(function () {
   });
 });
 
+// Load environment variables
+
 $(document).ready(function () {
   //Closing the form after submitting the results
   const submitFormBtn = document.getElementById("submitForm");
